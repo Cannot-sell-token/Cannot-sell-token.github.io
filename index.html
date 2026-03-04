@@ -92,6 +92,7 @@
       display:flex; align-items:center; gap:12px;
       font-family:"Space Grotesk", ui-sans-serif;
       letter-spacing:-.02em;
+      min-width: 260px;
     }
     .mark{
       width:40px; height:40px; border-radius:14px;
@@ -142,13 +143,12 @@
       border:1px solid rgba(255,255,255,.18);
     }
     .btn-primary:hover{ background: linear-gradient(135deg, rgba(139,92,246,1), rgba(34,211,238,1)); }
-    .btn-ghost{
-      background: transparent;
-      box-shadow:none;
-      border:1px dashed rgba(255,255,255,.18);
-      color: rgba(234,240,255,.85);
+    .btn-big{
+      padding: 18px 30px;
+      font-size: 16px;
+      min-width: min(560px, 100%);
+      box-shadow: 0 26px 70px rgba(139,92,246,.18);
     }
-    .btn-ghost:hover{ background: rgba(255,255,255,.06); box-shadow: var(--shadow2); }
 
     /* Cards / layout */
     .section{ padding: 20px 0; }
@@ -172,7 +172,7 @@
     p{ margin:0 0 10px; color: rgba(234,240,255,.86); }
     .muted{ color: var(--muted); }
 
-    /* HERO — new structure (single wide) */
+    /* HERO */
     .hero{ padding: 28px 0 10px; }
     .hero-wrap{
       position:relative;
@@ -220,12 +220,15 @@
       margin-top: 10px;
     }
 
+    /* ONE CTA centered */
     .hero-actions{
-      margin-top: 16px;
-      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+      margin-top: 18px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
 
-    /* Symptom chips (instead of right dashboard) */
+    /* Symptom chips */
     .symptoms{
       margin-top: 18px;
       display:grid;
@@ -321,9 +324,8 @@
       text-align:left;
     }
     tr:last-child td{ border-bottom:none; }
-    .k-ok{ color: rgba(52,211,153,.95); font-weight:900; }
-    .k-warn{ color: rgba(251,191,36,.95); font-weight:900; }
     .k-bad{ color: rgba(251,113,133,.95); font-weight:900; }
+    .k-warn{ color: rgba(251,191,36,.95); font-weight:900; }
 
     /* Input */
     .checker{
@@ -435,10 +437,11 @@
   <header class="topbar">
     <div class="container">
       <div class="topbar-inner">
-        <div class="brand">
+        <!-- LEFT BRAND: keyword instead of domain -->
+        <div class="brand" aria-label="Brand">
           <div class="mark" aria-hidden="true"></div>
           <div>
-            <div class="brand-title">cannot-sell-token.github.io</div>
+            <div class="brand-title">Why can't I sell my token</div>
             <div class="brand-sub">Troubleshooting runbook • Updated 2026</div>
           </div>
         </div>
@@ -465,7 +468,7 @@
           <div class="badge-row">
             <span class="badge"><span class="dot" aria-hidden="true"></span> Troubleshooting-first</span>
             <span class="badge">No hype • Actionable</span>
-            <span class="badge">Keyword focus: “why can’t I sell my token”</span>
+            <span class="badge">Keyword focus: “why can't i sell my token”</span>
           </div>
 
           <h1>Why Can't I Sell My Token? Complete Fix Guide</h1>
@@ -476,9 +479,9 @@
             <b>token cannot be sold</b>, and <b>token sell failed Uniswap</b>.
           </p>
 
+          <!-- ONE CTA, centered, larger -->
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#fix">Start the fix checklist</a>
-            <a class="btn btn-ghost" href="#how-to-check">Check if a token is a scam</a>
+            <a class="btn btn-primary btn-big" href="#fix" aria-label="Start the fix checklist">Start the fix checklist</a>
           </div>
 
           <div class="symptoms" aria-label="Quick symptoms">
@@ -616,7 +619,6 @@
             </div>
 
             <div class="divider"></div>
-
             <h3>What to look for (on-chain logic)</h3>
             <p class="muted">
               Focus on “who can sell”, “when can they sell”, and “what happens to value on sell” (tax + routing).
@@ -751,45 +753,6 @@
       </div>
     </section>
 
-    <!-- HOW TO CHECK IF SCAM -->
-    <section id="how-to-check" class="section">
-      <div class="container">
-        <div class="panel">
-          <div class="panel-pad">
-            <h2>How to Check If a Token Is a Scam</h2>
-            <p class="muted">
-              The most reliable approach is: verify the <b>token contract address</b>, quote a <b>tiny sell</b>, and confirm liquidity depth.
-              Don’t rely on ticker names or logos.
-            </p>
-
-            <div class="checker" aria-label="Token input">
-              <div class="input" title="Paste token contract address (0x...)">
-                <span>0x</span>
-                <input id="tokenAddr" inputmode="text" placeholder="Paste token contract address (example: 0x1234...)" aria-label="Token contract address" />
-              </div>
-              <a class="btn btn-primary" href="#fix">Run the fix steps</a>
-            </div>
-
-            <div class="divider"></div>
-
-            <h3>Authoritative sources (new set)</h3>
-            <p class="muted">
-              These are standard references for swaps, ERC-20 behavior, wallet troubleshooting, and scam alerts (used contextually across the guide).
-            </p>
-
-            <div class="sources" aria-label="Sources">
-              <a class="src" href="https://docs.uniswap.org/" target="_blank" rel="nofollow noopener">Uniswap Docs</a>
-              <a class="src" href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank" rel="nofollow noopener">Ethereum.org: ERC-20</a>
-              <a class="src" href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a>
-              <a class="src" href="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks" target="_blank" rel="nofollow noopener">CISA: phishing avoidance</a>
-              <a class="src" href="https://www.sec.gov/oiea/investor-alerts-and-bulletins" target="_blank" rel="nofollow noopener">SEC Investor Alerts</a>
-              <a class="src" href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse reporting</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- UNISWAP -->
     <section id="uniswap" class="section">
       <div class="container">
@@ -820,6 +783,18 @@
                   <li><b>Output ~0</b> → tax and/or liquidity problem</li>
                 </ul>
               </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3>Token quick input (optional)</h3>
+            <p class="muted">Paste an address to keep your workflow consistent (no external calls are made).</p>
+            <div class="checker" aria-label="Token input">
+              <div class="input">
+                <span>0x</span>
+                <input id="tokenAddr" inputmode="text" placeholder="Paste token contract address (example: 0x1234...)" aria-label="Token contract address" />
+              </div>
+              <a class="btn btn-primary" href="#fix">Go to fix steps</a>
             </div>
           </div>
         </div>
@@ -899,22 +874,21 @@
                   <li>Don’t sign new approvals to unknown contracts.</li>
                   <li>Save token address + tx hashes + involved wallets.</li>
                   <li>Report via <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse</a>.</li>
-                  <li>Review wallet help via <a href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a>.</li>
+                  <li>Wallet help: <a href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a>.</li>
                 </ul>
               </div>
             </div>
 
             <div class="divider"></div>
-
             <p class="muted" style="margin:0">
-              If you’re stuck on “cannot sell meme coin” — treat it as a liquidity + restriction problem until proven otherwise.
+              Long tail: <b>token price but cannot sell</b>, <b>token sell failed uniswap</b>, <b>cannot sell meme coin</b>, <b>token blacklist error</b>.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AUTHOR / EEAT -->
+    <!-- EEAT / SOURCES -->
     <section class="section">
       <div class="container">
         <div class="panel">
@@ -934,15 +908,15 @@
 
             <div class="divider"></div>
 
-            <p class="muted" style="margin:0">
-              References used:
-              <a href="https://docs.uniswap.org/" target="_blank" rel="nofollow noopener">Uniswap Docs</a> •
-              <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank" rel="nofollow noopener">Ethereum.org ERC-20</a> •
-              <a href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a> •
-              <a href="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks" target="_blank" rel="nofollow noopener">CISA phishing guidance</a> •
-              <a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins" target="_blank" rel="nofollow noopener">SEC alerts</a> •
-              <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse</a>.
-            </p>
+            <h3>Authoritative references</h3>
+            <div class="sources" aria-label="Sources">
+              <a class="src" href="https://docs.uniswap.org/" target="_blank" rel="nofollow noopener">Uniswap Docs</a>
+              <a class="src" href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank" rel="nofollow noopener">Ethereum.org: ERC-20</a>
+              <a class="src" href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a>
+              <a class="src" href="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks" target="_blank" rel="nofollow noopener">CISA: phishing avoidance</a>
+              <a class="src" href="https://www.sec.gov/oiea/investor-alerts-and-bulletins" target="_blank" rel="nofollow noopener">SEC Investor Alerts</a>
+              <a class="src" href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse reporting</a>
+            </div>
           </div>
         </div>
       </div>
@@ -958,7 +932,7 @@
             <details>
               <summary>Why can't I sell my token even though the price shows?</summary>
               <p>
-                The displayed price can reflect a last trade or UI estimate, not your executable sell at size. If liquidity is thin, price impact is huge,
+                The displayed price may reflect a last trade or UI estimate, not your executable sell at size. If liquidity is thin, price impact is huge,
                 or the token has restrictions/taxes, your sell can fail or output becomes near zero. Always test a tiny sell quote first.
               </p>
             </details>
@@ -995,14 +969,6 @@
             </details>
 
             <details>
-              <summary>How can I tell if token trading is disabled?</summary>
-              <p>
-                Tokens may have an owner-controlled trading switch or anti-bot gating. If most wallets can’t sell but a few can,
-                or sells revert until some condition is met, assume trading gate risk.
-              </p>
-            </details>
-
-            <details>
               <summary>Can raising slippage fix a “cannot sell token” problem?</summary>
               <p>
                 It can help with normal volatility, but it does not fix honeypots or blacklists. High slippage can also cause you to accept a terrible effective price.
@@ -1022,26 +988,15 @@
               <summary>What should I do if I think I bought a scam token?</summary>
               <p>
                 Stop interacting with unknown links, don’t sign new approvals, save tx hashes and the token address, and report via
-                <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse</a>. For wallet-level checks use
-                <a href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a>.
-              </p>
-            </details>
-
-            <details>
-              <summary>What’s the best first step to diagnose a sell problem?</summary>
-              <p>
-                Confirm the token contract address and run a tiny sell quote. That quickly tells you if the issue is a revert (restriction),
-                near-zero output (tax), or huge price impact (liquidity).
+                <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse</a>.
               </p>
             </details>
 
             <div class="divider"></div>
 
             <p class="muted" style="margin:0">
-              Targeted searches: <b>why can't i sell my token</b>, <b>cannot sell token</b>, <b>token cannot be sold</b>,
-              <b>crypto token sell problem</b>, <b>why token price shows but cannot sell</b>.
-              Long-tail: <b>token price but cannot sell</b>, <b>token sell failed uniswap</b>, <b>cannot sell meme coin</b>,
-              <b>token blacklist error</b>, <b>why cant i sell my crypto</b>.
+              Primary keywords: <b>why can't i sell my token</b>, <b>cannot sell token</b>, <b>token cannot be sold</b>, <b>crypto token sell problem</b>,
+              <b>why token price shows but cannot sell</b>.
             </p>
           </div>
         </div>
@@ -1053,7 +1008,7 @@
         <div class="footer-row">
           <div>© 2026 cannot-sell-token.github.io • Troubleshooting guide</div>
           <div>
-            <a href="#fix">Fix checklist</a> • <a href="#how-to-check">Scam check</a> • <a href="#faq">FAQ</a>
+            <a href="#fix">Fix checklist</a> • <a href="#uniswap">Uniswap</a> • <a href="#faq">FAQ</a>
           </div>
         </div>
       </div>
@@ -1065,7 +1020,6 @@
     (function(){
       const input = document.getElementById('tokenAddr');
       if(!input) return;
-
       function normalize(){
         const v = (input.value || "").trim();
         const m = v.match(/0x[a-fA-F0-9]{40}/);
