@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- SEO / EEAT Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Why Can't I Sell My Token? Complete Fix Guide (2026)</title>
+  <meta name="description" content="Why can't I sell my token? Complete 2026 fix guide: honeypots, trading disabled, high sell tax tokens, DEX liquidity problems, Uniswap sell failed errors, blacklist issues, and step-by-step solutions. Includes checklists, decision tables, and deep FAQ." />
+  <meta name="author" content="On-Chain Troubleshooting Desk" />
+  <link rel="canonical" href="https://cannot-sell-token.github.io/" />
+
+  <meta property="og:title" content="Why Can't I Sell My Token? Complete Fix Guide (2026)" />
+  <meta property="og:description" content="Fix cannot sell token issues: honeypot, sell tax, liquidity problems, trading disabled, Uniswap errors. Step-by-step checks + FAQ." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cannot-sell-token.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Why Can't I Sell My Token? Complete Fix Guide (2026)",
+    "author":{"@type":"Organization","name":"On-Chain Troubleshooting Desk"},
+    "dateModified":"2026-03-04",
+    "datePublished":"2026-03-04",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://cannot-sell-token.github.io/"}
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#f7faf9;
+      --bg2:#eef6ff;
+      --text:#0b1220;
+      --muted:#4b5563;
+      --border:#e5e7eb;
+
+      --card: rgba(255,255,255,.78);
+      --card2: rgba(255,255,255,.60);
+
+      --shadow: 0 22px 60px rgba(2,6,23,.10);
+      --shadow2: 0 12px 30px rgba(2,6,23,.08);
+
+      --a:#10b981;   /* emerald */
+      --a2:#3b82f6;  /* blue */
+      --warn:#f59e0b;
+      --bad:#ef4444;
+      --ok:#16a34a;
+
+      --r:18px;
+      --r2:26px;
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      line-height:1.55;
+      background:
+        radial-gradient(900px 500px at 12% 10%, rgba(16,185,129,.14), transparent 60%),
+        radial-gradient(900px 500px at 88% 12%, rgba(59,130,246,.12), transparent 60%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+    }
+
+    a{color:var(--a2); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Header */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(247,250,249,.70);
+      border-bottom: 1px solid rgba(229,231,235,.95);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; letter-spacing:-.02em;
+    }
+    .mark{
+      width:38px; height:38px; border-radius:14px;
+      background: linear-gradient(135deg, var(--a), var(--a2));
+      box-shadow: 0 14px 35px rgba(16,185,129,.18);
+      position:relative;
+      overflow:hidden;
+    }
+    .mark:after{
+      content:"";
+      position:absolute; inset:10px;
+      border-radius:12px;
+      background: rgba(255,255,255,.86);
+      transform: rotate(10deg);
+    }
+    .brand small{display:block; color:var(--muted); font-weight:800}
+
+    .nav-links{
+      display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end;
+      font-size:14px; color:var(--muted);
+    }
+    .nav-links a{color:var(--muted)}
+    .nav-links a:hover{color:var(--text); text-decoration:none}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid rgba(229,231,235,.95);
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow2);
+      color: var(--text);
+      font-weight:900;
+      text-decoration:none !important;
+      transition: transform .15s ease, box-shadow .15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: var(--shadow)}
+    .btn-primary{
+      color:#fff;
+      border:1px solid rgba(255,255,255,.35);
+      background: linear-gradient(135deg, rgba(16,185,129,.96), rgba(59,130,246,.96));
+      box-shadow: 0 18px 55px rgba(16,185,129,.20);
+    }
+
+    /* Sections */
+    .section{padding: 18px 0}
+    .card{
+      border-radius: var(--r2);
+      border:1px solid rgba(229,231,235,.95);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow2);
+      padding: 18px;
+    }
+    .divider{height:1px; background: rgba(229,231,235,.95); margin: 14px 0}
+    .muted{color:var(--muted)}
+
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(30px, 3.1vw, 46px);
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+    h2{margin:0 0 10px; font-size:22px; letter-spacing:-.02em}
+    h3{margin:0 0 8px; font-size:16px; letter-spacing:-.01em}
+    p{margin:0 0 10px}
+
+    /* Hero (new unique structure) */
+    .hero{padding: 30px 0 10px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 14px;
+      align-items:stretch;
+    }
+    .hero-main{
+      border-radius: var(--r2);
+      border:1px solid rgba(229,231,235,.95);
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.62));
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-main:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(780px 260px at 12% 8%, rgba(16,185,129,.18), transparent 60%),
+        radial-gradient(680px 240px at 92% 10%, rgba(59,130,246,.16), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-main > *{position:relative}
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(16,185,129,.09);
+      border:1px solid rgba(16,185,129,.20);
+      color: #065f46;
+      font-weight:900;
+      font-size:13px;
+    }
+    .kicker .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: linear-gradient(135deg, var(--a), var(--a2));
+    }
+    .lead{margin:0; color:var(--muted); font-size:16px}
+
+    .cta-row{
+      margin-top:16px;
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+    }
+    .cta-row .btn-primary{
+      padding: 16px 22px;
+      font-size: 15px;
+    }
+
+    .hero-side{
+      border-radius: var(--r2);
+      border:1px solid rgba(229,231,235,.95);
+      background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.58));
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow2);
+      padding: 18px;
+    }
+
+    .diag{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+    .pill{
+      display:flex; align-items:flex-start; gap:10px;
+      padding: 12px 12px;
+      border-radius: 18px;
+      border:1px solid rgba(229,231,235,.95);
+      background: rgba(255,255,255,.62);
+    }
+    .tag{
+      flex:0 0 auto;
+      font-weight:900;
+      font-size:12px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      color:#fff;
+      background: rgba(59,130,246,.92);
+    }
+    .tag.warn{background: rgba(245,158,11,.92)}
+    .tag.bad{background: rgba(239,68,68,.92)}
+    .pill b{display:block; margin-bottom:2px}
+    .pill span{color:var(--muted); font-size:13px}
+
+    /* quick nav chips */
+    .toc{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:12px;
+    }
+    .toc a{
+      font-size:13px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(229,231,235,.95);
+      background: rgba(255,255,255,.55);
+      color: var(--muted);
+      text-decoration:none;
+    }
+    .toc a:hover{color:var(--text)}
+
+    /* grids */
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    ul{margin: 8px 0 0 18px; color:var(--muted)}
+    li{margin:6px 0}
+
+    /* tables */
+    .table-wrap{overflow:auto; border-radius:18px; border:1px solid rgba(229,231,235,.95)}
+    table{border-collapse:collapse; width:100%; min-width:860px; background: rgba(255,255,255,.78)}
+    th,td{padding:12px 12px; border-bottom:1px solid rgba(229,231,235,.95); vertical-align:top}
+    th{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); text-align:left; background: rgba(247,250,249,.92)}
+    td{font-size:14px}
+    tr:last-child td{border-bottom:none}
+    .ok{color:var(--ok); font-weight:900}
+    .bad{color:var(--bad); font-weight:900}
+    .warn{color:var(--warn); font-weight:900}
+
+    /* input */
+    .checker{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:10px;
+    }
+    .input{
+      flex: 1 1 420px;
+      display:flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(229,231,235,.95);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 10px 25px rgba(2,6,23,.05);
+    }
+    .input input{
+      border:none; outline:none; width:100%;
+      background:transparent;
+      font-size:14px;
+      color:var(--text);
+    }
+
+    /* sources chips */
+    .source-pills{
+      margin-top:12px;
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+      color:var(--muted); font-size:13px;
+    }
+    .source-pills a{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(229,231,235,.95);
+      background: rgba(255,255,255,.55);
+      color: var(--muted);
+      text-decoration:none;
+    }
+    .source-pills a:hover{color:var(--text); text-decoration:none}
+
+    /* FAQ */
+    details{
+      border:1px solid rgba(229,231,235,.95);
+      border-radius: 16px;
+      background: rgba(255,255,255,.62);
+      padding: 12px 12px;
+    }
+    details + details{margin-top:10px}
+    summary{cursor:pointer; font-weight:900; letter-spacing:-.01em}
+    details p{margin:10px 0 0; color:var(--muted)}
+    details ul{margin-top:8px}
+
+    /* author */
+    .author{
+      display:flex; gap:12px; align-items:flex-start;
+      border:1px solid rgba(229,231,235,.95);
+      background: rgba(255,255,255,.62);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .avatar{
+      width:44px; height:44px; border-radius: 16px;
+      background: linear-gradient(135deg, rgba(16,185,129,.95), rgba(59,130,246,.95));
+      box-shadow: 0 12px 30px rgba(16,185,129,.16);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .avatar:after{
+      content:"";
+      position:absolute; inset:10px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.85);
+    }
+    .smallcaps{font-size:12px; text-transform:uppercase; letter-spacing:.08em}
+    .footer{
+      padding: 26px 0 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer .row{
+      display:flex; gap:14px; justify-content:space-between; flex-wrap:wrap; align-items:center;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      table{min-width:760px}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="brand" aria-label="Site brand">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <div style="font-size:14px; line-height:1.1">Cannot Sell Token</div>
+            <small>Complete fix guide • Updated 2026</small>
+          </div>
+        </div>
+
+        <nav class="nav-links" aria-label="Top navigation">
+          <a href="#why">Why it happens</a>
+          <a href="#honeypot">Honeypots</a>
+          <a href="#tax">Sell tax</a>
+          <a href="#liquidity">Liquidity</a>
+          <a href="#uniswap">Uniswap</a>
+          <a href="#fix">Fix steps</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (unique layout: split diagnosis card) -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="kicker"><span class="dot" aria-hidden="true"></span> Troubleshooting-first • No hype</div>
+
+            <h1>Why Can't I Sell My Token? Complete Fix Guide</h1>
+
+            <p class="lead">
+              If your wallet shows a price but your trade fails, you’re dealing with one of a few root causes:
+              <b>honeypot restrictions</b>, <b>token trading disabled</b>, <b>high sell tax</b>, or <b>DEX liquidity problems</b>.
+              This page is a practical runbook for <b>cannot sell token</b> and <b>token sell failed Uniswap</b> errors.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#fix" aria-label="Jump to fix steps">Start the fix checklist</a>
+              <a class="btn" href="#how-to-check" aria-label="Check if token is scam">Check if token is a scam</a>
+            </div>
+
+            <div class="toc" aria-label="Quick navigation">
+              <a href="#why">Why tokens cannot be sold</a>
+              <a href="#honeypot">Honeypot tokens explained</a>
+              <a href="#tax">High sell tax tokens</a>
+              <a href="#liquidity">Liquidity problems on DEX</a>
+              <a href="#disabled">Trading disabled errors</a>
+              <a href="#uniswap">How to sell on Uniswap</a>
+              <a href="#fix">How to fix sell errors</a>
+              <a href="#faq">FAQ</a>
+            </div>
+          </div>
+
+          <aside class="hero-side" aria-label="Quick diagnosis">
+            <h3 style="margin:0">Quick Diagnosis</h3>
+            <p class="muted" style="margin:6px 0 0">
+              Match your symptom to the most likely failure mode.
+            </p>
+
+            <div class="diag">
+              <div class="pill">
+                <span class="tag bad">Fail</span>
+                <div>
+                  <b>Sell reverts / cannot estimate gas</b>
+                  <span>Often contract restriction (honeypot), blacklist, or trading disabled.</span>
+                </div>
+              </div>
+
+              <div class="pill">
+                <span class="tag warn">Low</span>
+                <div>
+                  <b>Sell works but output is near zero</b>
+                  <span>Usually extreme sell tax or thin liquidity causing heavy slippage.</span>
+                </div>
+              </div>
+
+              <div class="pill">
+                <span class="tag">UI</span>
+                <div>
+                  <b>Price shows but swap fails</b>
+                  <span>Wrong token/pair, router mismatch, or liquidity moved/removed.</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Why Some Crypto Tokens Cannot Be Sold</h2>
+          <p class="muted">
+            When users search <b>“why can't i sell my token”</b> or <b>“token price but cannot sell”</b>, the cause is almost always one of these:
+            contract-level restrictions, punitive tokenomics (tax), or market structure (liquidity).
+          </p>
+
+          <div class="table-wrap" style="margin-top:12px" aria-label="Decision table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symptom</th>
+                  <th>Most likely cause</th>
+                  <th>Fast check</th>
+                  <th>Fix direction</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Swap failed / revert</b></td>
+                  <td class="bad">Honeypot restriction / blacklist / trading disabled</td>
+                  <td>Try tiny sell simulation; inspect contract functions</td>
+                  <td>Stop trading; verify contract; assume scam until proven otherwise</td>
+                </tr>
+                <tr>
+                  <td><b>Output near zero</b></td>
+                  <td class="warn">High sell tax or thin liquidity</td>
+                  <td>Preview trade impact + price impact</td>
+                  <td>Reduce size, confirm taxes, check liquidity depth</td>
+                </tr>
+                <tr>
+                  <td><b>Price looks high but no buyers</b></td>
+                  <td class="warn">Oracle/UI price ≠ executable price</td>
+                  <td>Check pool reserves and router quote</td>
+                  <td>Use correct pair, confirm liquidity exists</td>
+                </tr>
+                <tr>
+                  <td><b>Only some wallets can sell</b></td>
+                  <td class="bad">Whitelist-only sells / anti-bot gating</td>
+                  <td>Read contract restrictions</td>
+                  <td>Avoid; this is a common scam pattern</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="muted" style="margin:0">
+            Practical tip: always start with a <b>tiny test trade</b> and <b>on-chain verification</b> before increasing size.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONEYPOT -->
+    <section id="honeypot" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Honeypot Tokens Explained</h2>
+          <p class="muted">
+            A honeypot is designed to look tradable, but selling is blocked or only allowed under hidden conditions.
+            If your <b>cannot sell token</b> issue is a hard revert, assume honeypot risk first.
+          </p>
+
+          <div class="grid" style="margin-top:12px">
+            <div class="pill">
+              <span class="tag bad">Trap</span>
+              <div>
+                <b>Hard honeypot</b>
+                <span>Sells revert (router sells fail), or wallet is blacklisted. Typical: “cannot estimate gas”.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <span class="tag warn">Drain</span>
+              <div>
+                <b>Soft honeypot</b>
+                <span>Sells technically succeed but taxes/conditions make it effectively impossible to exit profitably.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>What to check (fast)</h3>
+          <ul>
+            <li>Does a tiny sell revert consistently?</li>
+            <li>Is the contract verified and readable on a block explorer?</li>
+            <li>Are there whitelist/blacklist gates, trading toggles, or maxTx constraints?</li>
+            <li>Can an owner/admin change taxes or enable/disable trading?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAX -->
+    <section id="tax" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>High Sell Tax Tokens</h2>
+          <p class="muted">
+            High taxes can create the feeling of <b>token cannot be sold</b> even when the contract allows selling. If your output is near zero,
+            you’re likely seeing a massive fee, price impact, or both.
+          </p>
+
+          <div class="grid" style="margin-top:12px">
+            <div class="pill">
+              <span class="tag warn">Tax</span>
+              <div>
+                <b>Sell “works” but output collapses</b>
+                <span>Common in meme coins: fees route to a tax wallet, liquidity, or “marketing” address.</span>
+              </div>
+            </div>
+            <div class="pill">
+              <span class="tag">Math</span>
+              <div>
+                <b>Price impact vs tax</b>
+                <span>Thin pools amplify slippage; taxes amplify losses. Always check both in the quote.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>How to confirm tax risk</h3>
+          <ul>
+            <li>Preview the trade output for a tiny sell and for your intended size.</li>
+            <li>Compare expected output at 0.1% size vs 1% size of pool liquidity.</li>
+            <li>If the contract owner can change tax parameters, treat it as a major risk.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIQUIDITY -->
+    <section id="liquidity" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Liquidity Problems on DEX</h2>
+          <p class="muted">
+            Liquidity is the market’s ability to absorb your sell without collapsing the price. Many “cannot sell meme coin” cases are simply:
+            there isn’t enough liquidity to exit, or liquidity was pulled.
+          </p>
+
+          <div class="table-wrap" style="margin-top:12px" aria-label="Liquidity check table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Liquidity condition</th>
+                  <th>What you see</th>
+                  <th>Risk</th>
+                  <th>What to do</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Very low liquidity</b></td>
+                  <td>Huge price impact / failed swaps</td>
+                  <td class="warn">Exit becomes impractical</td>
+                  <td>Reduce size, confirm pool depth, avoid increasing exposure</td>
+                </tr>
+                <tr>
+                  <td><b>Liquidity removed</b></td>
+                  <td>Quotes break or revert; pool looks empty</td>
+                  <td class="bad">Often rug-like behavior</td>
+                  <td>Assume scam; preserve tx data; don’t approve new contracts</td>
+                </tr>
+                <tr>
+                  <td><b>Wrong pair/router</b></td>
+                  <td>UI shows price but swap fails</td>
+                  <td class="warn">Execution mismatch</td>
+                  <td>Use the correct pair and verified token address</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISABLED -->
+    <section id="disabled" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Token Trading Disabled Errors</h2>
+          <p class="muted">
+            Some tokens implement an internal “trading enabled” switch or anti-bot gates. This can create classic
+            <b>token sell failed Uniswap</b> behavior. If only certain wallets can sell, that’s an especially strong danger sign.
+          </p>
+
+          <div class="grid" style="margin-top:12px">
+            <div class="pill">
+              <span class="tag bad">Gate</span>
+              <div>
+                <b>Trading toggles / anti-bot rules</b>
+                <span>Contract blocks sells until enabled, after a time window, or unless whitelisted.</span>
+              </div>
+            </div>
+            <div class="pill">
+              <span class="tag bad">List</span>
+              <div>
+                <b>Blacklist / restricted transfers</b>
+                <span>Wallet blocked from transferring/selling; shows as transfer failure or revert.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="muted" style="margin:0">
+            If you suspect scam behavior, stop interacting and preserve transaction hashes and the token contract address.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO CHECK IF SCAM -->
+    <section id="how-to-check" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>How to Check If a Token Is a Scam</h2>
+          <p class="muted">
+            Scam detection is strongest when you combine: (1) verified contract review, (2) tiny trade simulation, and (3) liquidity validation.
+            Use the token contract address (0x...) as your single source of truth.
+          </p>
+
+          <div class="checker" aria-label="Token input">
+            <div class="input" title="Paste a token contract address (0x...)">
+              <span style="font-weight:900; color:var(--muted)">0x</span>
+              <input id="tokenAddr" inputmode="text" placeholder="Paste token contract address (example: 0x1234...)" aria-label="Token contract address" />
+            </div>
+            <a class="btn btn-primary" href="#fix" aria-label="Jump to fix checklist">Run the fix checklist</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Authoritative references (unique set)</h3>
+          <p class="muted">
+            These sources are linked where relevant (protocol mechanics, safe swaps, consumer risk, and reporting).
+          </p>
+          <div class="source-pills" aria-label="Authoritative sources">
+            <a href="https://docs.uniswap.org/" target="_blank" rel="nofollow noopener">Uniswap Docs</a>
+            <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank" rel="nofollow noopener">Ethereum.org ERC-20</a>
+            <a href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a>
+            <a href="https://www.coinbase.com/learn/crypto-basics" target="_blank" rel="nofollow noopener">Coinbase Learn</a>
+            <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse (reporting)</a>
+            <a href="https://www.sec.gov/investor-alerts-and-bulletins" target="_blank" rel="nofollow noopener">SEC Investor Alerts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNISWAP -->
+    <section id="uniswap" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>How to Sell Tokens on Uniswap</h2>
+          <p class="muted">
+            If you’re seeing <b>token sell failed Uniswap</b>, the fix usually comes from using the correct token address, correct route/pair,
+            and sensible slippage for the pool’s liquidity. For protocol mechanics, see <a href="https://docs.uniswap.org/" target="_blank" rel="nofollow noopener">Uniswap Docs</a>.
+          </p>
+
+          <div class="grid" style="margin-top:12px">
+            <div>
+              <h3>Step-by-step sell flow</h3>
+              <ol style="margin:8px 0 0 18px; color:var(--muted)">
+                <li>Confirm the <b>token contract address</b> (don’t rely on tickers or logos).</li>
+                <li>Open Uniswap and paste the contract address into the token selector.</li>
+                <li>Start with a <b>tiny sell</b> to confirm sellability and expected output.</li>
+                <li>Check price impact. If it’s high, the pool is thin (reduce size).</li>
+                <li>Adjust slippage only if necessary. Huge slippage can mask bad tokens.</li>
+              </ol>
+            </div>
+            <div>
+              <h3>Common Uniswap sell errors</h3>
+              <ul>
+                <li><b>“Cannot estimate gas”</b> → often revert from token contract logic (restriction/gate).</li>
+                <li><b>“Swap failed”</b> → routing/price movement, or token-level revert.</li>
+                <li><b>“Transfer failed”</b> → blacklist, maxTx, or token restrictions.</li>
+                <li><b>Output near zero</b> → high tax or thin liquidity.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIX -->
+    <section id="fix" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>How to Fix Token Sell Errors</h2>
+          <p class="muted">
+            This is the exact checklist to resolve <b>cannot sell token</b> and <b>token cannot be sold</b> issues. Do it in order.
+          </p>
+
+          <div class="grid" style="margin-top:12px">
+            <div class="pill">
+              <span class="tag">1</span>
+              <div>
+                <b>Verify the token address</b>
+                <span>Use the contract address. Same ticker ≠ same token. Wrong token = wrong outcome.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <span class="tag">2</span>
+              <div>
+                <b>Run a tiny sell</b>
+                <span>If it reverts, don’t increase size. Treat it as restriction risk first.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <span class="tag">3</span>
+              <div>
+                <b>Check liquidity + price impact</b>
+                <span>Thin liquidity can make selling impossible at meaningful size.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <span class="tag">4</span>
+              <div>
+                <b>Differentiate tax vs slippage</b>
+                <span>Near-zero output can be tax or liquidity. Compare tiny vs larger quotes.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <span class="tag warn">5</span>
+              <div>
+                <b>Only adjust slippage when justified</b>
+                <span>Raising slippage won’t fix a honeypot. It can increase losses on bad tokens.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <span class="tag warn">6</span>
+              <div>
+                <b>Stop if scam signals appear</b>
+                <span>Whitelist-only sells, blacklists, trading toggles, or reverts = strong scam indicators.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Safety actions (if you suspect a scam)</h3>
+          <ul>
+            <li>Do not sign new approvals or “migrate” prompts from unknown sites.</li>
+            <li>Save contract address + transaction hashes + wallet addresses involved.</li>
+            <li>Consider reporting via <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse</a>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST / AUTHOR -->
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Trust &amp; Update Notes</h2>
+
+          <div class="author" aria-label="Author box">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <div class="smallcaps muted">Author</div>
+              <div><b>On-Chain Troubleshooting Desk</b> — operational guides for DEX execution issues and token risk checks.</div>
+              <div class="muted" style="margin-top:6px">
+                Last updated: <b>March 4, 2026</b> • Educational content only (not financial advice).
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="muted" style="margin:0">
+            Primary references:
+            <a href="https://docs.uniswap.org/" target="_blank" rel="nofollow noopener">Uniswap Docs</a> •
+            <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank" rel="nofollow noopener">Ethereum.org ERC-20</a> •
+            <a href="https://support.metamask.io/" target="_blank" rel="nofollow noopener">MetaMask Support</a> •
+            <a href="https://www.coinbase.com/learn/crypto-basics" target="_blank" rel="nofollow noopener">Coinbase Learn</a> •
+            <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse</a> •
+            <a href="https://www.sec.gov/investor-alerts-and-bulletins" target="_blank" rel="nofollow noopener">SEC Investor Alerts</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>FAQ – Cannot Sell Token Problems</h2>
+
+          <details>
+            <summary>Why can’t I sell my token even though the price shows?</summary>
+            <p>
+              The displayed price can be a UI reference, not an executable exit price. If liquidity is thin, your sell causes huge price impact,
+              or the token has restrictions/taxes, the trade can fail or output becomes near zero. Always check a tiny sell quote and pool liquidity.
+            </p>
+          </details>
+
+          <details>
+            <summary>What does “cannot estimate gas” mean when selling?</summary>
+            <p>
+              It often means the token contract would revert the transaction. That’s common in honeypots, blacklists, trading-disabled states,
+              maxTx limits, or anti-bot gates. If this happens on a tiny sell, treat it as a serious risk signal.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is “swap failed” on Uniswap always a honeypot?</summary>
+            <p>
+              Not always. “Swap failed” can be routing, rapid price movement, or slippage settings. But if the failure is consistent (especially on tiny sells),
+              it strongly suggests token-level restrictions. Start with verified token address and a tiny sell test.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why does my sell output show almost zero?</summary>
+            <p>
+              Near-zero output usually means extreme sell tax, thin liquidity (high price impact), or both. Compare a tiny sell quote vs a larger quote.
+              If output collapses disproportionately, the pool is thin or the token has punitive tax mechanics.
+            </p>
+          </details>
+
+          <details>
+            <summary>What is a token blacklist error?</summary>
+            <p>
+              Some contracts implement blacklists that prevent certain wallets from transferring or selling. This can show as “transfer failed” or a revert.
+              If only specific wallets can sell, it’s a major scam indicator.
+            </p>
+          </details>
+
+          <details>
+            <summary>How can I check if token trading is disabled?</summary>
+            <p>
+              Many scam or launch-phase tokens include a trading toggle or anti-bot gate. If selling fails for most users but insiders can sell,
+              or if a contract has owner-controlled “enable trading” style logic, treat it as high risk.
+            </p>
+          </details>
+
+          <details>
+            <summary>How to sell tokens on Uniswap safely?</summary>
+            <p>
+              Use the verified contract address, start with a tiny sell, check price impact, and avoid raising slippage blindly.
+              Uniswap protocol mechanics are documented here: <a href="https://docs.uniswap.org/" target="_blank" rel="nofollow noopener">Uniswap Docs</a>.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can raising slippage fix a “cannot sell token” issue?</summary>
+            <p>
+              Sometimes it helps with normal volatility, but it does not fix honeypots or blacklist restrictions. High slippage can also increase losses
+              on taxed tokens. Use slippage as a last-mile execution tool, not as a “fix.”
+            </p>
+          </details>
+
+          <details>
+            <summary>Why can’t I sell my meme coin?</summary>
+            <p>
+              The top reasons are: honeypot restrictions, high sell taxes, and thin liquidity. Meme coins often have fast-changing pool conditions
+              and tokenomics, so you must validate sellability and liquidity before sizing up.
+            </p>
+          </details>
+
+          <details>
+            <summary>What should I do if I think I bought a scam token?</summary>
+            <p>
+              Stop interacting with unknown websites, don’t sign new approvals, and preserve transaction hashes and the contract address.
+              Consider reporting via <a href="https://www.chainabuse.com/" target="_blank" rel="nofollow noopener">Chainabuse</a>.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is “token cannot be sold” always fraud?</summary>
+            <p>
+              Not always: sometimes it’s simply low liquidity or wrong routing. But persistent reverts on tiny sells, whitelist-only sells,
+              blacklists, and owner-controlled trading toggles are extremely strong fraud signals.
+            </p>
+          </details>
+
+          <details>
+            <summary>What is the best first step to diagnose a sell problem?</summary>
+            <p>
+              Confirm the token contract address and run a tiny sell quote. That single step often tells you whether the issue is restrictions (revert),
+              taxes (near-zero output), or liquidity (huge price impact). Then proceed with the checklist in the “How to Fix” section.
+            </p>
+          </details>
+
+          <div class="divider"></div>
+
+          <p class="muted" style="margin:0">
+            Targeted searches: <b>why can't i sell my token</b>, <b>cannot sell token</b>, <b>token cannot be sold</b>, <b>crypto token sell problem</b>,
+            <b>why token price shows but cannot sell</b>, plus long-tail: <b>token price but cannot sell</b>, <b>token sell failed uniswap</b>,
+            <b>cannot sell meme coin</b>, <b>token blacklist error</b>, <b>why cant i sell my crypto</b>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div>© 2026 cannot-sell-token.github.io • Troubleshooting guide</div>
+          <div>
+            <a href="#fix">Fix checklist</a> • <a href="#uniswap">Uniswap steps</a> • <a href="#faq">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Lightweight UX: extract 0x address if user pastes a URL or extra text.
+    (function(){
+      const input = document.getElementById('tokenAddr');
+      if(!input) return;
+
+      function normalize(){
+        const v = (input.value || "").trim();
+        const m = v.match(/0x[a-fA-F0-9]{40}/);
+        if(m) input.value = m[0];
+      }
+      input.addEventListener('paste', () => setTimeout(normalize, 0));
+      input.addEventListener('blur', normalize);
+    })();
+  </script>
+</body>
+</html>
